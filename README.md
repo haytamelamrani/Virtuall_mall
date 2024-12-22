@@ -36,7 +36,7 @@ Blender/Vectary : Pour la modélisation des éléments 3D.
 
 #Équipe de développement
 
-Elamrani Haytam : Chef de projet et développeur front-end.
+Elamrani Haytam : Chef de projet .
 
 Ali Chlouchi :
 
@@ -44,22 +44,4 @@ Genoune Faris :
 
 Marouane Boutayeb :
 
-About
-No description, website, or topics provided.
-Resources
- Readme
- Activity
-Stars
- 0 stars
-Watchers
- 1 watching
-Forks
- 0 forks
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-Footer
 
