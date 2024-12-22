@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/image_2.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Amélioration du texte */
+
+/* Conteneur du texte */
+#sign-in-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white; /* Couleur de fond verte */
+    color:black; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sign-in-btn:hover {
+    background-color: #45a049; /* Changement de couleur au survol */
+}
+
+.welcome-text {
+    color: #f1f1f1;
+    font-size: 2rem; /* Taille du texte */
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif;
+    display: inline-block;
+    width: 100%; /* Laissez la largeur à 100% pour occuper toute la page */
+    overflow: hidden;
+    white-space: normal; /* Permet le retour à la ligne automatique */
+}
+
+.welcome-text span {
+    opacity: 0;
+    display: inline-block;
+    margin-right: 5px;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s; /* Temps d'animation pour chaque mot */
+}
+
+.welcome-text span.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.welcome-text span.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: absolute;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+    right: 30%; 
+}
+
+/* Alignement du menu (png) avec le texte Virtuall Mall */
+.navbar {
+    display: flex;
+    justify-content: space-evenly; /* ou space-around */
+    left: 15%;
+}
+.logo {
+    position: relative;
+      
+      /* place le logo à gauche avec une marge de 10px */
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+/* Hover Effect for Links */
+.navbar .nav-links ul li a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #ed3c57;
+    font-weight: 600;
+}
+
+.navbar .nav-links ul li.activer a {
+    color: #ed3c57;
+    font-weight: 600;
+}
+
+/* Menu mobile */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-links.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links.mobile-menu ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links.mobile-menu ul li {
+    margin: 25px 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/* Navbar Icon (Menu) */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 35px;
+}
+
+/* Responsive Design */
+
+    .menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.mobile-menu {
+        display: flex;
+    }
+
