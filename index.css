@@ -1,192 +1,203 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style: none;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-header {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(../assets/image_2.jpg);
+    background: url(./assets/background.jpg) no-repeat center center fixed;
     background-size: cover;
+}
+.navbar{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: black;
+    white-space: nowrap;
+    gap: 30%;
 }
-
-/* Amélioration du texte */
-
-/* Conteneur du texte */
-#sign-in-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: white; /* Couleur de fond verte */
-    color:black; /* Couleur du texte */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#sign-in-btn:hover {
-    background-color: #45a049; /* Changement de couleur au survol */
-}
-
-.welcome-text {
-    color: #f1f1f1;
-    font-size: 2rem; /* Taille du texte */
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.6);
-    letter-spacing: 2px;
-    font-family: 'Arial', sans-serif;
-    display: inline-block;
-    width: 100%; /* Laissez la largeur à 100% pour occuper toute la page */
-    overflow: hidden;
-    white-space: normal; /* Permet le retour à la ligne automatique */
-}
-
-.welcome-text span {
-    opacity: 0;
-    display: inline-block;
-    margin-right: 5px;
-    transform: translateY(20px);
-    transition: opacity 1s, transform 1s; /* Temps d'animation pour chaque mot */
-}
-
-.welcome-text span.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.welcome-text span.hide {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-/* Navbar Styles */
-.navbar {
-    position: absolute;
-    margin: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.navbar a {
-    color: white;
-}
-
-.navbar .logo {
-    font-size: 2em;
-    font-weight: bold;
-    right: 30%; 
-}
-
-/* Alignement du menu (png) avec le texte Virtuall Mall */
-.navbar {
-    display: flex;
-    justify-content: space-evenly; /* ou space-around */
-    left: 15%;
-}
-.logo {
-    position: relative;
-      
-      /* place le logo à gauche avec une marge de 10px */
-}
-
-.navbar .nav-links ul {
-    display: flex;
-}
-
-.navbar .nav-links ul li {
+.navbar h1{
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.5;
+    display: inline-block; /* Permet d'être entouré par les images */
     margin: 0 20px;
-    position: relative;
 }
-
-/* Hover Effect for Links */
-.navbar .nav-links ul li a {
+.dflex{
+    display: flex;
+    gap: 10%; 
+}
+.li1{
     color: white;
-    transition: color 0.3s ease;
 }
 
-.navbar .nav-links ul li a:hover {
-    color: #ed3c57;
-    font-weight: 600;
+li{
+    list-style: none;
+    color: #333;
+    font-size: 28px;
+}
+li:hover{
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
 }
 
-.navbar .nav-links ul li.activer a {
-    color: #ed3c57;
-    font-weight: 600;
+h1{
+    color: white;
 }
-
-/* Menu mobile */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-links ul {
-    display: flex;
-    flex-direction: row;
-}
-
-.nav-links.mobile-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-links.mobile-menu ul {
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-links.mobile-menu ul li {
-    margin: 25px 0;
-    font-size: 1.5rem;
+.left-part {
     text-align: center;
+    
+    padding: 20px;
+    border-radius: 20px;
+    width: 25%;
+    margin-left: 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.low-part {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    margin: 30px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.low-part button {
+    margin-top: 0%;
+    background-color: #4CAF50; /* Vert vibrant */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px; /* Coins plus arrondis */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase; /* Texte en majuscule */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    transition: all 0.3s ease-in-out; /* Transition fluide pour tous les effets */
+    animation: pulse 0.5s infinite alternate; /* Animation de pulsation */
+}
+
+.low-part button:hover {
+    background-color: #45a049; /* Vert plus foncé au survol */
+    transform: scale(1.1) rotate(-3deg); /* Agrandit légèrement le bouton et rotation */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+    letter-spacing: 1px; /* Espacement des lettres au survol */
+    
+}
+
+.low-part button:active {
+    transform: scale(1); /* Remet à taille normale au clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre normale au clic */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 
-/* Navbar Icon (Menu) */
-.menu {
+img {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+.right-part{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-    width: 35px;
+    gap: 20px;
+}
+.image1 {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    background: url(./assets/product1.jpg);
+    background-size: cover; 
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: rotate(-20deg);
 }
 
-/* Responsive Design */
+.image1 img {
+    width: 60%;
+    height: auto;
+    margin-top: 62%; /* Déplace l'image vers le bas */
+    margin-left: 5%; /* Déplace l'image vers la droite */
+}
 
-    .menu {
-        display: block;
-    }
+.image2 {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    background: url(./assets/product2.jpg)no-repeat center center;
+    background-size: cover; 
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 
-    .nav-links {
-        display: none;
-    }
+.image2 img {
+    width: 50%;
+    height: auto;
+    margin-top: 60%; /* Déplace l'image vers le bas */
+    margin-left: 1%; /* Déplace l'image vers la droite */
+}
 
-    .nav-links.mobile-menu {
-        display: flex;
-    }
+
+.image3 {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    background: url(./assets/product3.jpg)no-repeat center center;
+    background-size: cover; 
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: rotate(+20deg);
+}
+
+.image3 img {
+    width: 50%;
+    height: auto;
+    margin-top: 26%; /* Déplace l'image vers le bas */
+    margin-left: 1%; /* Déplace l'image vers la droite */
+}
+
+.right-part {
+    display: flex;
+    gap: 0; /* Enlever l'écart entre les images */
+}
+
+.image1, .image2, .image3 {
+    width: 250px; /* Réduit la largeur */
+    height: 300px; /* Réduit la hauteur */
+    text-align: center;
+    background-size: cover; 
+    padding: 15px; /* Réduit le padding */
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 0; /* Enlève les marges */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.right-part{
+    display: flex;
+    gap: 5px;
+}
+.high-part {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}

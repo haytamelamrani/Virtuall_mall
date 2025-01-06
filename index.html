@@ -3,64 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtuall Mall</title>
+    <title>virtuall Mall</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#" class="logo">Virtuall Mall</a>
-        <a href="./Sgin_In/index.html"><button id="sign-in-btn">Sign In</button></a>
-        <div class="nav-links">
-            <ul>
-                <li class="activer"><a href="#">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Contact</a></li>
-                
-            </ul>
-        </div>
-        <img src="./assets/navigation-bar.png" alt="menu" class="menu" id="menu-icon">
-    </nav>
 
-    <header>
-        <div class="welcome-text">
-            <span>Welcome</span>
-            <span>to</span>
-            <span>Virtual</span>
-            <span>Mall</span>
-            <span>and</span>
-            <span>discover</span>
-            <span>a</span>
-            <span>new</span>
-            <span>shopping</span>
-            <span>experience!</span>
-        </div>
-        
-    </header>
+    <div class="navbar">
+        <a href="./index.html"><h1>Virtuall Mall</h1></a>
+    <ul class="dflex">
+        <a href="./index.html"><li class="li1">Home</li></a>
+        <a href="#"><li class="li2">Product</li></a>
+        <a href="#"><li class="li3">Store</li></a>
+        <a href="#"><li class="li4">About Us</li></a>
+        <a href="#"><li class="li5">Contact Us</li></a>
+    </ul>
+    </div>
+    <div class="mer">
+    <div class="high-part">
+    <div class="left-part">
+        <h1>
+            Welcome to Virtuall Mall! <br>
+            and discover <br>
+            a new shoping experience
+        </h1>
+    </div>
+    <div class="right-part">
+        <div class="image1"><img src="./assets/6.png" alt=""></div>
+        <div class="image2"><img src="./assets/3.png" alt=""></div>
+        <div class="image3"><img src="./assets/2.png" alt=""></div>
+    </div>
+   
+    </div>
+    <div class="low-part">
+        <h1>
+            start your new experience right now 
+        </h1>
+        <a href="#"><button>Sign In</button></a>
+    </div>
+    </div>
 
-    <script>
-        const menuIcon = document.getElementById('menu-icon');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuIcon.addEventListener('click', () => {
-            navLinks.classList.toggle('mobile-menu');
-        });
-    </script>
-    <script>
-        const words = document.querySelectorAll('.welcome-text span');
-    
-        function showWords() {
-            // Afficher chaque mot
-            words.forEach((word, index) => {
-                setTimeout(() => {
-                    word.classList.add('show');
-                }, index * 500); // Délai entre l'apparition de chaque mot (1 seconde)
-            });
-    
-        }
-        // Lancer l'animation
-        showWords();
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
