@@ -1,0 +1,38 @@
+[
+    {
+        "id": 2,
+        "name":"Air Jordan 1 ",
+        "price": 199,
+        "image": "../assets/1.png"
+    },
+    {
+        "id": 1,
+        "name":" Nike Air Force 1",
+        "price": 199,
+        "image": "../assets/2.png"
+    },
+    {
+        "id": 3,
+        "name":" Nike Air Jordan I",
+        "price": 199,
+        "image": "../assets/3.png"
+    },
+    {
+        "id": 4,
+        "name":" One Million Parfum",
+        "price": 199,
+        "image": "../assets/4.png"
+    },
+    {
+        "id": 5,
+        "name":" Bleu de Chanel Parfum",
+        "price": 199,
+        "image": "../assets/5.png"
+    },
+    {
+        "id": 6,
+        "name":" Nike Air Force 1",
+        "price": 199,
+        "image": "../assets/6.png"
+    }
+]
