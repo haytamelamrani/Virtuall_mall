@@ -6,6 +6,11 @@ let body = document.querySelector('body');
 let closeCart = document.querySelector('.close');
 let products = [];
 let cart = [];
+let buyNowButton = document.getElementById('buy-now');
+let paymentContainer = document.querySelector('.payment-container');
+let totalPrice = 199;
+
+
 
 
 iconCart.addEventListener('click', () => {
@@ -71,7 +76,6 @@ const addCartToHTML = () => {
             let newItem = document.createElement('div');
             newItem.classList.add('item');
             newItem.dataset.id = item.product_id;
-
             let positionProduct = products.findIndex((value) => value.id == item.product_id);
             let info = products[positionProduct];
             listCartHTML.appendChild(newItem);
@@ -89,10 +93,52 @@ const addCartToHTML = () => {
                     <span class="plus">></span>
                 </div>
             `;
+            
         })
+        
     }
+    totalPrice=totalPrice*totalQuantity;
     iconCartSpan.innerText = totalQuantity;
+    
 }
+
+buyNowButton.addEventListener('click', () => {
+    // Afficher la div en modifiant son style
+    paymentContainer.style.display = 'block';
+
+    // Ajouter le contenu HTML à la div
+     // Exemple de prix, vous pouvez le remplacer par votre logique
+    paymentContainer.innerHTML = `
+        <h2>Total Price: $${totalPrice}</h2>
+        <h2>Payment</h2>
+        <form action="#" method="post">
+            <label for="card-name">Name on Card:</label>
+            <input type="text" id="card-name" name="card-name" required>
+        
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" maxlength="16" required>
+        
+            <label for="expiry-date">Expiration Date:</label>
+            <input type="month" id="expiry-date" name="expiry-date" required>
+        
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" required>
+        
+            <button type="submit" id="pay">Pay</button>
+            <div class="image"><img src="../assets/visa.png" alt="Visa Logo"></div>
+        </form>
+    `;
+
+    let payNowButton = document.getElementById('pay');
+
+    payNowButton.addEventListener('click', (event) => {
+        event.preventDefault(); 
+        paymentContainer.style.display = 'none';
+    });
+});
+
+
+
 
 listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
