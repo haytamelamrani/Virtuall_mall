@@ -97,7 +97,7 @@ const addCartToHTML = () => {
         })
         
     }
-    totalPrice=totalPrice*totalQuantity;
+    totalPrice=199*totalQuantity;
     iconCartSpan.innerText = totalQuantity;
     
 }
