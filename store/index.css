@@ -1,0 +1,213 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D2D2D2;
+    background-image:
+        repeating-linear-gradient(
+            to right, transparent 0 100px,
+            #25283b22 100px 101px
+        ),
+        repeating-linear-gradient(
+            to bottom, transparent 0 100px,
+            #25283b22 100px 101px
+        );
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+.background-image {
+    position: absolute;  /* Positionner l'image en arrière-plan */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* S'assurer que l'image couvre tout l'espace */
+    z-index: -1;  /* L'image reste derrière le contenu */
+}
+.slider {
+    
+    position: absolute;
+    --quantity: 6; /* Nombre total d'éléments */
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 35s linear infinite;
+    z-index: 2;
+}
+/* Content styles */
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Keyframes */
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-2deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-2deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Positionne le contenu en bas */
+    align-items: center;
+    padding: 10px;
+}
+.banner .slider .item img{
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border: 3px solid #25283B;
+    border-radius: 10px; /* Arrondi plus important */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.banner .slider .item img:hover {
+    transform: translateY(-5px) scale(1.05); /* Légère élévation et zoom au survol */
+    box-shadow: 
+        0 8px 15px rgba(4, 155, 201, 0.3), /* Ombre plus forte */
+        0 3px 6px rgba(2, 207, 243, 0.2), /* Ombre secondaire */
+        inset 0 2px 6px rgba(255, 255, 255, 0.4); /* Effet lumineux intérieur renforcé */
+}
+.banner .slider .item .buy-button {
+    position: absolute;
+    bottom: 55px; /* Distance depuis le bas de l'image */
+    right: 60px;
+    transform: translateX(-55%);
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #25283B;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 3; /* S'assurer que le bouton est au-dessus de l'image */
+    
+}
+.banner .slider .item .buy-button:hover {
+    background-color: #414561;
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.banner .content h1{
+    
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+
+.image-title {
+    margin-top: 10px;
+    font-family: 'ICA Rubrik', sans-serif;
+    font-size: 16px; 
+    font-weight: 500; /* Légèrement en gras */
+    text-align: 40px; 
+    color: black; 
+    transition: transform 0.3s ease, color 0.3s ease; /* Effets élégants */
+    width: 100%; /* Prend toute la largeur du conteneur parent */
+    
+}
+.item:hover .image-title {
+    transform: translateY(-5px); 
+    
+}
+
+
+@media screen and (min-width: 1024px) {
+    .banner .slider{
+        width: 400px;
+        height: 500px;
+        left: calc(50% - 200px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 12em;
+    }
+    
+}
+@media screen and (min-width: 1440px) {
+    .banner .slider{
+        width: 300px;
+        height: 350px;
+        left: calc(50% - 150px);
+        top:calc(48% - 250px) ;
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(330px);
+    }
+    .banner .content h1{
+        top: 30px;
+        font-size: 7em;
+    }
+}
+
+
+
+
+
+
+
+
+
