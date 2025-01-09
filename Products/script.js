@@ -11,8 +11,6 @@ let paymentContainer = document.querySelector('.payment-container');
 let totalPrice = 199;
 
 
-
-
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 })
