@@ -8,11 +8,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh;/* Prend toute la hauteur de la fenêtre */
     width: 100%;
     background: url("../assets/image_2.jpg") no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover;/* L'image occupe tout l’espace de manière proportionnelle */
 }
 
 .form-box {
@@ -22,7 +22,8 @@ section {
     background: transparent;
     border: none;
     border-radius: 20px;
-    backdrop-filter: blur(15px) brightness(80%);
+    backdrop-filter: blur(15px) brightness(80%);/* Effet de flou et réduction de la luminosité */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,8 +49,8 @@ h2 {
     transform: translateY(-50%);
     color: #fff;
     font-size: 1em;
-    pointer-events: none;
-    transition: 0.5s;
+    pointer-events: none;/* Désactive les interactions (clique, etc.) */
+    transition: 0.5s;/* Transition douce pour les changements d'état */
 }
 
 
@@ -62,8 +63,8 @@ input:valid~label {
     height: 50px;
     background: transparent;
     border: none;
-    outline: none;
-    font-size: 1em;
+    outline: none;/* Supprime les contours au focus */
+    font-size: 1em;/* Taille de police standard */
     padding: 0 35px 0 5px;
     color: #fff;
 }
@@ -104,9 +105,9 @@ button {
     background-color: #fff;
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor: pointer; /* Change le curseur en pointeur */
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 600;/* Texte en semi-gras */
 }
 
 .register {
@@ -117,7 +118,7 @@ button {
 }
 
 .register p a {
-    text-decoration: none;
+    text-decoration: none;/* Pas de soulignement */
     color: #fff;
     font-weight: 600;
 }
