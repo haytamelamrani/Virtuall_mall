@@ -48,11 +48,11 @@ h2 {
     position: absolute;
     top: 50%;
     left: 5px;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Corrige l'alignement vertical */
     color: #fff;
     font-size: 1em;
-    pointer-events: none;
-    transition: 0.5s;
+    pointer-events: none;/* Rend l'étiquette non cliquable */
+    transition: 0.5s;/* Ajoute une transition fluide lors du mouvement de l'étiquette */
 }
 
 input:focus~label,
@@ -86,7 +86,7 @@ button {
     background-color: #fff;
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor: pointer;/* Change le curseur en main lors du survol */
     font-size: 1em;
     font-weight: 600;
     margin-top: 20px;
