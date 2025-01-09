@@ -6,6 +6,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+.navbar{
+    display: flex;
+    background-color: black;
+    white-space: nowrap;
+    gap: 30%;
+}
+.navbar h1{
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.5;
+    display: inline-block; /* Permet d'être entouré par les images */
+    margin: 0 20px;
+}
+.dflex{
+    display: flex;
+    gap: 10%; 
+}
+.li5{
+    color: white;
+}
+
+li{
+    list-style: none;
+    color: #333;
+    font-size: 28px;
+}
+li:hover{
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
 
 body {
     background-color: #D2D2D2;
