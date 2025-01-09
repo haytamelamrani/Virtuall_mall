@@ -6,7 +6,7 @@ Bienvenue dans Virtual Mall, un projet innovant visant à créer une expérience
 
 Ali Chlouchi
 
-Genoune Faris
+Guennoun Faris
 
 Marouane Boutayeb
 
@@ -40,7 +40,7 @@ Elamrani Haytam : Chef de projet .
 
 Ali Chlouchi :
 
-Genoune Faris :
+Guennoun Faris :
 
 Marouane Boutayeb :
 
