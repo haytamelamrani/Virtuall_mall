@@ -7,8 +7,8 @@
 section {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    align-items: center;/* Centre les éléments verticalement. */
+    min-height: 100vh;/* La hauteur minimale de la section est égale à la hauteur de la fenêtre. */
     width: 100%;
     background: url("../assets/image_2.jpg") no-repeat center center;
     background-size: cover;
@@ -24,10 +24,10 @@ section {
     backdrop-filter: blur(15px) brightness(80%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;/* Centre les enfants verticalement. */
     flex-direction: column;
     padding: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box;/* Inclut le padding et la bordure dans les dimensions totales de l'élément. */
 }
 
 h2 {
@@ -48,11 +48,11 @@ h2 {
     position: absolute;
     top: 50%;
     left: 5px;
-    transform: translateY(-50%);
+    transform: translateY(-50%);/* Corrige le placement pour parfaitement centrer verticalement l'étiquette. */
     color: #fff;
     font-size: 1em;
-    pointer-events: none;
-    transition: 0.5s;
+    pointer-events: none;/* L'étiquette n'est pas interactive. */
+    transition: 0.5s; /* Ajoute une transition de 0.5 secondes pour les changements de position. */
 }
 
 input:focus~label,
@@ -64,8 +64,8 @@ input:valid~label {
     width: 100%;
     height: 50px;
     background: transparent;
-    border: none;
-    outline: none;
+    border: none;/* Supprime toute bordure autour du champ. */
+    outline: none;/* Supprime le contour par défaut au focus. */
     font-size: 1em;
     padding: 0 35px 0 5px;
     color: #fff;
@@ -111,7 +111,7 @@ button:hover {
 .register p a {
     text-decoration: none;
     color: #fff;
-    font-weight: 600;
+    font-weight: 600;/* Le texte du lien est affiché en gras (poids 600). */
 }
 
 .register p a:hover {
